@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const App = () => {
   const [courses, setCourses] = useState([]);
@@ -39,6 +41,8 @@ const App = () => {
   }, [searchQuery, selectedCategory, courses]);
 
   return (
+    <>
+    <Navbar />
     <main className="flex-grow min-h-screen">
       <div className="py-20 gradient1">
         <div className="container mx-auto px-4 md:px-8">
@@ -118,6 +122,8 @@ const App = () => {
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 };
 
