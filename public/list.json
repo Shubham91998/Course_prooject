@@ -1,0 +1,162 @@
+[
+    {
+      "id": 1,
+      "title": "Introduction to Python",
+      "category": "Programming Languages",
+      "rating": 4.5,
+      "students": 10000,
+      "image": "https://via.placeholder.com/400x200/3776AB/FFFFFF.png?text=Python+Course&bg=3776AB,FFD43B"
+    },
+    {
+      "id": 2,
+      "title": "Machine Learning Fundamentals",
+      "category": "AI/ML",
+      "rating": 4.7,
+      "students": 8000,
+      "image": "https://via.placeholder.com/400x200/FF6F61/FFFFFF.png?text=Machine+Learning+Course&bg=FF6F61,FFA07A"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript for Beginners",
+      "category": "Programming Languages",
+      "rating": 4.3,
+      "students": 12000,
+      "image": "https://via.placeholder.com/400x200/F0DB4F/000000.png?text=JavaScript+Course&bg=F0DB4F,F7DF1E"
+    },
+    {
+      "id": 4,
+      "title": "Deep Learning with TensorFlow",
+      "category": "AI/ML",
+      "rating": 4.8,
+      "students": 6000,
+      "image": "https://via.placeholder.com/400x200/FF9900/FFFFFF.png?text=Deep+Learning+Course&bg=FF9900,FF4500"
+    },
+    {
+      "id": 5,
+      "title": "C++ Advanced Concepts",
+      "category": "Programming Languages",
+      "rating": 4.6,
+      "students": 5000,
+      "image": "https://via.placeholder.com/400x200/00599C/FFFFFF.png?text=C%2B%2B+Advanced+Course&bg=00599C,004482"
+    },
+    {
+      "id": 6,
+      "title": "Natural Language Processing",
+      "category": "AI/ML",
+      "rating": 4.5,
+      "students": 7000,
+      "image": "https://via.placeholder.com/400x200/4CAF50/FFFFFF.png?text=NLP+Course&bg=4CAF50,45B649"
+    },
+    {
+      "id": 7,
+      "title": "Web Development with React",
+      "category": "Web Development",
+      "rating": 4.6,
+      "students": 9000,
+      "image": "https://via.placeholder.com/400x200/61DAFB/000000.png?text=React+Course&bg=61DAFB,2D9CDB"
+    },
+    {
+      "id": 8,
+      "title": "Data Science Essentials",
+      "category": "Data Science",
+      "rating": 4.4,
+      "students": 7500,
+      "image": "https://via.placeholder.com/400x200/9C27B0/FFFFFF.png?text=Data+Science+Course&bg=9C27B0,673AB7"
+    },
+    {
+      "id": 9,
+      "title": "Cloud Computing Fundamentals",
+      "category": "Cloud Computing",
+      "rating": 4.2,
+      "students": 6000,
+      "image": "https://via.placeholder.com/400x200/2196F3/FFFFFF.png?text=Cloud+Computing+Course&bg=2196F3,03A9F4"
+    },
+    {
+      "id": 10,
+      "title": "Advanced Python Programming",
+      "category": "Programming Languages",
+      "rating": 4.7,
+      "students": 8500,
+      "image": "https://via.placeholder.com/400x200/3776AB/FFFFFF.png?text=Advanced+Python&bg=3776AB,FFD43B"
+    },
+    {
+      "id": 11,
+      "title": "AI for Everyone",
+      "category": "AI/ML",
+      "rating": 4.6,
+      "students": 9500,
+      "image": "https://via.placeholder.com/400x200/FF6F61/FFFFFF.png?text=AI+for+Everyone&bg=FF6F61,FFA07A"
+    },
+    {
+      "id": 12,
+      "title": "Full Stack Web Development",
+      "category": "Web Development",
+      "rating": 4.5,
+      "students": 11000,
+      "image": "https://via.placeholder.com/400x200/61DAFB/000000.png?text=Full+Stack+Web+Dev&bg=61DAFB,2D9CDB"
+    },
+    {
+      "id": 13,
+      "title": "Big Data Analytics",
+      "category": "Data Science",
+      "rating": 4.3,
+      "students": 6500,
+      "image": "https://via.placeholder.com/400x200/9C27B0/FFFFFF.png?text=Big+Data+Analytics&bg=9C27B0,673AB7"
+    },
+    {
+      "id": 14,
+      "title": "AWS Certified Solutions Architect",
+      "category": "Cloud Computing",
+      "rating": 4.8,
+      "students": 7000,
+      "image": "https://via.placeholder.com/400x200/2196F3/FFFFFF.png?text=AWS+Certified&bg=2196F3,03A9F4"
+    },
+    {
+      "id": 15,
+      "title": "Java Programming Masterclass",
+      "category": "Programming Languages",
+      "rating": 4.4,
+      "students": 8000,
+      "image": "https://via.placeholder.com/400x200/007396/FFFFFF.png?text=Java+Masterclass&bg=007396,FFD43B"
+    },
+    {
+      "id": 16,
+      "title": "Computer Vision with OpenCV",
+      "category": "AI/ML",
+      "rating": 4.7,
+      "students": 5500,
+      "image": "https://via.placeholder.com/400x200/FF6F61/FFFFFF.png?text=Computer+Vision&bg=FF6F61,FFA07A"
+    },
+    {
+      "id": 17,
+      "title": "Node.js for Backend Development",
+      "category": "Web Development",
+      "rating": 4.6,
+      "students": 9000,
+      "image": "https://via.placeholder.com/400x200/61DAFB/000000.png?text=Node.js+Backend&bg=61DAFB,2D9CDB"
+    },
+    {
+      "id": 18,
+      "title": "Data Visualization with Tableau",
+      "category": "Data Science",
+      "rating": 4.5,
+      "students": 7000,
+      "image": "https://via.placeholder.com/400x200/9C27B0/FFFFFF.png?text=Tableau+Course&bg=9C27B0,673AB7"
+    },
+    {
+      "id": 19,
+      "title": "Google Cloud Platform Essentials",
+      "category": "Cloud Computing",
+      "rating": 4.3,
+      "students": 6000,
+      "image": "https://via.placeholder.com/400x200/2196F3/FFFFFF.png?text=GCP+Essentials&bg=2196F3,03A9F4"
+    },
+    {
+      "id": 20,
+      "title": "Ruby on Rails for Beginners",
+      "category": "Web Development",
+      "rating": 4.2,
+      "students": 5000,
+      "image": "https://via.placeholder.com/400x200/CC342D/FFFFFF.png?text=Ruby+on+Rails&bg=CC342D,FFD43B"
+    }
+  ]

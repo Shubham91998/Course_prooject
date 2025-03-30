@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Beginner to Pro in Excel: Financial Modeling and Valuation",
+      "category": "Business",
+      "price": "Free",
+      "image": "https://preview.colorlib.com/theme/edusite/img/course01.jpg.webp"
+    },
+    {
+      "id": 2,
+      "title": "Introduction to CSS",
+      "category": "Web Design",
+      "price": "Premium",
+      "image": "https://preview.colorlib.com/theme/edusite/img/course02.jpg.webp"
+    },
+    {
+      "id": 3,
+      "title": "The Ultimate Drawing Course | From Beginner To Advanced",
+      "category": "Drawing",
+      "price": "Free",
+      "image": "https://preview.colorlib.com/theme/edusite/img/course03.jpg.webp"
+    }
+  ]
