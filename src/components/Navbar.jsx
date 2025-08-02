@@ -1,63 +1,71 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from './Auth/useAuth';
 import ExploreBlog from "./ExploreBlog";
 
 function Navbar() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false); // For mobile menu
   const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null); // For mobile submenus
   const [openDropdown, setOpenDropdown] = useState(null); // For desktop dropdowns
 
   const menuItems = [
     {
-      name: "About",
+      name: "Home",
       submenu: [
-        {
-          title: "Our Mission",
-          description:
-            "We're pushing the boundaries of AI to solve real-world problems.",
-          link: "/mentorship",
-        },
-        {
-          title: "Our Team",
-          description: "Meet the experts behind our groundbreaking research.",
-          link: "/internship",
-        },
-        {
-          title: "Our Work",
-          description:
-            "Discover the innovative projects we're working on right now.",
-          link: "/placementtraining",
-        },
-        {
-          title: "Our Values",
-          description:
-            "Learn about the principles that guide our work and culture.",
-          link: "/jobtraining",
-        },
+        { title: "Home", link: "/", description: "Go to homepage" },
+        { title: "Explore Published Research Paper", link: "/research-papers", description: "Browse all research papers" },
+
       ],
     },
     {
-      name: "Course",
+      name: "Core Courses",
       submenu: [
-        { title: "Web Development", link: "/course" },
-        { title: "Data Science", link: "/data-science" },
-        { title: "AI & ML", link: "/event" },
-        { title: "Cyber Security", link: "/blog" },
+        { title: "Programming", link: "/languages", description: "OOP, C, C++, Java, Python, R, MATLAB" },
+        { title: "Web Development", link: "/web-development", description: "Frontend, Backend, Fullstack" },
+        { title: "Data Science", link: "/data-science", description: "Data Science, Analytics, Visualization" },
+        { title: "AI/ML", link: "/ai-ml", description: "Artificial Intelligence, Machine Learning, Deep Learning" },
+        { title: "Cyber Security", link: "/cyber-security", description: "Security, Cryptography, Networks" },
+        { title: "CS Core Subjects", link: "/cs-core", description: "Data Structures, Algorithms, DBMS, OS, CN, TOC" },
+        { title: "DevOps & Cloud", link: "/devops-cloud", description: "DevOps, Cloud, CI/CD, AWS, Azure, GCP" },
+        { title: "Mobile Development", link: "/mobile-development", description: "Android, iOS, Cross-platform" },
+        { title: "Career Skills", link: "/career-skills", description: "Aptitude, Communication, Interview Prep" },
+        { title: "Project Hub", link: "/project-hub", description: "Mini & Major Projects, Open Source" },
+      ],
+    },
+    // ...existing code for other main categories...
+    {
+      name: "Internship",
+      submenu: [
+        { title: "Industrial Internship", link: "/internship", description: "Industry Experience" },
+         { title: "Fellowships", link: "/doctoral-fellowships", description: "PhD Fellowships" },
+        { title: "Training & Placement", link: "/live-classes", description: "Live Training Sessions" },
+        { title: "Career Resources", link: "/career-resources", description: "Career Guidance" },
+        { title: "Certificate Verification", link: "/certificateverification", description: "Verify Certificates" },
       ],
     },
     {
-      name: "Discover",
+      name: "Mentorship",
       submenu: [
-        { title: "Latest Trends", link: "/job" },
-        { title: "Case Studies", link: "/case-studies" },
-        { title: "Research", link: "/research" },
+        { title: "Academic Mentorship", link: "/academic-mentorship", description: "Academic Guidance" },
+        { title: "Industry Mentorship", link: "/industry-mentorship", description: "Industry Guidance" },
+        { title: "Resume Submission", link: "/resume-submission", description: "Submit Resume" },
+        { title: "Interview Preparation", link: "/interview-preparation", description: "Prepare for Interviews" },
+
       ],
     },
     {
-      name: "Certification Course",
+      name: "More",
       submenu: [
-        { title: "Frontend Certification", link: "/Contect" },
-        { title: "Backend Certification", link: "/certificateverification" },
-        { title: "Fullstack Certification", link: "/fullstack-certification" },
+       
+        { title: "Events", link: "/events", description: "All Events" },
+        { title: "Calendar & Registration", link: "/calendar", description: "Event Calendar" },
+        { title: "Explore Blog", link: "/blog", description: "Read our latest articles" },
+        { title: "Review & Comment System", link: "/blog/reviews", description: "Blog Reviews & Comments" },
+        { title: "EWL Program", link: "/ewl-program", description: "EWL Program" },
+        { title: "Regular Vacancies", link: "/vacancies", description: "Job Vacancies" },
+        { title: "Contact Us", link: "/contact", description: "Contact Us" },
       ],
     },
   ];
@@ -147,16 +155,34 @@ function Navbar() {
               </div>
             ))}
           </ul>
+          {/* Login/Logout Button */}
+          <div className="hidden lg:block ml-4">
+            {user ? (
+              <button
+                onClick={() => { logout(); navigate('/login'); }}
+                className="bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="hidden lg:flex items-center space-x-4 mr-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
+              >
+                Login
+              </Link>
+            )}
+          </div>
 
           {/* Login Button (Desktop) */}
-          <div className="hidden lg:flex items-center space-x-4 mr-4">
+          {/* <div className="hidden lg:flex items-center space-x-4 mr-4 ">
             <a
-              href="/"
+              href="/login"
               className="px-6 py-1 bg-[#19B5FE] rounded-lg text-white font-medium"
             >
               Log in
             </a>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -220,14 +246,34 @@ function Navbar() {
           
             
           ))}
-          <div className="items-center space-x-4 mr-4 mt-36 ml-20">
+
+          <div className="flex flex-col items-center space-y-4 mt-10 mb-4">
+            {user ? (
+              <button
+                onClick={() => { logout(); navigate('/login'); setIsOpen(false); }}
+                className="w-full bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
+              >
+                Login
+              </Link>
+            )}
+          </div>
+
+          {/* <div className="items-center space-x-4 mr-4 mt-36 ml-20">
             <a
-              href="/"
-              className="px-6 py-1 bg-[#19B5FE] rounded-lg text-white font-medium"
+              href="/login"
+              className="px-6 py-1 bg-[#19B5FE] rounded-lg text-white font-medium bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
             >
               Log in
             </a>
-          </div>
+          </div> */}
         </ul>
         
 
@@ -249,10 +295,13 @@ function Navbar() {
                     </a>
                   ) : (
                     // Render object-based submenu items
-                    <a
-                      href={subItem.link}
+                    <Link
+                      to={subItem.link}
                       className="hover:bg-stone-50 p-2 rounded-lg block"
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setOpenMobileSubmenu(null);
+                      }}
                     >
                       <h3 className="text-gray-700 font-medium">
                         {subItem.title}
@@ -260,7 +309,7 @@ function Navbar() {
                       <p className="text-gray-500 text-sm">
                         {subItem.description}
                       </p>
-                    </a>
+                    </Link>
                   )}
                 </li>
               ))}

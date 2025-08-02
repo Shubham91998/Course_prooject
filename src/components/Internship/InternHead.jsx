@@ -14,7 +14,6 @@ const InternHead = () => {
     <>
    
       <div className="min-h-screen bg-gradient-to-b from-[#ffffff] to-[#d6bdf6] pt-[70px]">
-        <Navbar />
         <HeroSection />
         <WelcomeSection />
         <BenefitsSection />
@@ -22,7 +21,6 @@ const InternHead = () => {
         <InternExperiances />
         <ApplicationProcess />
         <ApplyNowSection />
-        <Footer />
       </div>
  
       

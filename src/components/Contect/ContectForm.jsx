@@ -113,7 +113,7 @@ const ContactForm = () => {
               </div>
               <div className="bg-blue-50 p-4 rounded-lg text-center">
                 <p className="font-semibold text-blue-800 mb-2">Need Quick Help?</p>
-                <a href="#" className="text-primary hover:underline">Check our Frequently Asked Questions</a>
+                <a href="#" className="text-primary">Check our Frequently Asked Questions</a>
               </div>
               <div className="mt-6">
                 <h4 className="text-center font-semibold text-gray-700 mb-4">Connect With Us</h4>
