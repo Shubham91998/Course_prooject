@@ -1,72 +1,73 @@
 import React from "react";
 import Slider from "react-slick";
+import {
+  FaStar,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icons
 
-// Custom Previous Arrow Component
-const CustomPrevArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-8 cursor-pointer z-10"
-      onClick={onClick}
-    >
-      <FaChevronLeft className="text-3xl text-blue-700 hover:text-blue-900" />
+// CUSTOM ARROWS
+const CustomPrevArrow = ({ onClick }) => (
+  <div
+    className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-20"
+    onClick={onClick}
+  >
+    <div className="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-full cursor-pointer hover:scale-110 transition duration-300">
+      <FaChevronLeft className="text-white text-xl" />
     </div>
-  );
-};
+  </div>
+);
 
-// Custom Next Arrow Component
-const CustomNextArrow = (props) => {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-8 cursor-pointer z-10"
-      onClick={onClick}
-    >
-      <FaChevronRight className="text-3xl text-blue-700 hover:text-blue-900" />
+const CustomNextArrow = ({ onClick }) => (
+  <div
+    className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-20"
+    onClick={onClick}
+  >
+    <div className="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-full cursor-pointer hover:scale-110 transition duration-300">
+      <FaChevronRight className="text-white text-xl" />
     </div>
-  );
-};
+  </div>
+);
 
 const PreviousEvents = () => {
-  // Slider settings
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Show 3 slides by default
+    speed: 700,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     arrows: true,
-    prevArrow: <CustomPrevArrow />, // Use custom previous arrow
-    nextArrow: <CustomNextArrow />, // Use custom next arrow
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        breakpoint: 1024, // Tablet breakpoint
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // Mobile breakpoint
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
   };
 
-  // Event data
   const events = [
     {
-      title: "How to become a Software Engineer at Google?",
+      title: "How to Become a Software Engineer at Google?",
       date: "Aug 29, 2024",
       rating: 4.7,
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
       instructors: [
         {
           name: "Suryansu Dash",
@@ -76,90 +77,152 @@ const PreviousEvents = () => {
         },
         {
           name: "Swapnil Negi",
-          role: "SWE-III @ Google | IIT Roorkee | ICPC Asia West '20",
+          role: "SWE-III @ Google",
           avatar:
             "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/afe78466d55c4443b3b35197636493f8.png",
         },
-        {
-          name: "Nishant Chandra",
-          role: "Co-founder @ Code Skills",
-          avatar:
-            "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/04ff3fee5b7b449dace4c95c612ec402.png",
-        },
       ],
     },
+
     {
-      title: "Mastering Data Structures and Algorithms",
+      title: "Mastering Data Structures & Algorithms",
       date: "Sep 15, 2024",
       rating: 4.8,
+      image:
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
       instructors: [
         {
           name: "John Doe",
-          role: "Senior Software Engineer @ Amazon",
-          avatar: "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/d0155770eff44e428a70771cf8302489.jpeg",
+          role: "Senior Engineer @ Amazon",
+          avatar:
+            "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/d0155770eff44e428a70771cf8302489.jpeg",
         },
         {
           name: "Jane Smith",
           role: "Software Engineer @ Microsoft",
-          avatar: "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/d0155770eff44e428a70771cf8302489.jpeg",
+          avatar:
+            "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/d0155770eff44e428a70771cf8302489.jpeg",
         },
       ],
     },
-    // Add more events here
+
+    {
+      title: "System Design for Product Companies",
+      date: "Oct 10, 2024",
+      rating: 4.9,
+      image:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+      instructors: [
+        {
+          name: "Rohit Arora",
+          role: "SDE @ Microsoft",
+          avatar:
+            "https://d3dyfaf3iutrxo.cloudfront.net/file/trainer/instructor/d0155770eff44e428a70771cf8302489.jpeg",
+        },
+      ],
+    },
   ];
 
   return (
-    <div className="bg-[#F8FAFC] py-10 mx-3">
-      <h2 className="text-center text-2xl font-bold text-blue-700 mb-6">
-        Previous Events
-      </h2>
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="bg-[#050816] py-24 px-4 overflow-hidden">
+
+      {/* HEADING */}
+      <div className="text-center mb-16">
+
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+        >
+          Previous Events
+        </motion.h2>
+
+        <p className="text-gray-400 mt-5 text-lg max-w-2xl mx-auto">
+          Explore our past premium sessions with engineers from top product companies.
+        </p>
+      </div>
+
+      {/* SLIDER */}
+      <div className="max-w-7xl mx-auto relative">
+
         <Slider {...settings}>
+
           {events.map((event, index) => (
-            <div key={index} className="px-2">
-              <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {event.title}
-                </h3>
-                <p className="text-gray-600 mt-2">Event Timings: {event.date}</p>
+            <div key={index} className="px-4 py-4">
 
-                {/* Rating */}
-                <div className="flex justify-center items-center mt-2 text-yellow-500">
-                  <FaStar className="text-xl" />
-                  <span className="ml-1 text-lg font-semibold">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
+              >
+
+                {/* IMAGE */}
+                <div className="relative h-52 overflow-hidden">
+
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover hover:scale-110 transition duration-700"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+
+                  {/* RATING */}
+                  <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full flex items-center gap-2 font-bold">
+                    <FaStar />
                     {event.rating}
-                  </span>
+                  </div>
                 </div>
 
-                {/* Instructors */}
-                <div className="mt-4">
-                  {event.instructors.map((instructor, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-center space-x-3 mt-2"
-                    >
-                      <img
-                        src={instructor.avatar}
-                        alt={instructor.name}
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="text-left">
-                        <p className="text-gray-800 font-semibold">
-                          {instructor.name}
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          {instructor.role}
-                        </p>
+                {/* CONTENT */}
+                <div className="p-6">
+
+                  <p className="text-blue-400 text-sm font-semibold">
+                    {event.date}
+                  </p>
+
+                  <h3 className="text-2xl font-bold text-white mt-3 leading-snug">
+                    {event.title}
+                  </h3>
+
+                  {/* INSTRUCTORS */}
+                  <div className="mt-6 space-y-4">
+
+                    {event.instructors.map((instructor, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-4"
+                      >
+
+                        <img
+                          src={instructor.avatar}
+                          alt={instructor.name}
+                          className="w-14 h-14 rounded-full border-2 border-blue-500 object-cover"
+                        />
+
+                        <div>
+                          <h4 className="text-white font-semibold">
+                            {instructor.name}
+                          </h4>
+
+                          <p className="text-gray-400 text-sm">
+                            {instructor.role}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+
+                  {/* BUTTON */}
+                  <button className="mt-8 w-full py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 font-semibold text-white hover:scale-[1.02] transition duration-300">
+                    Watch Recording
+                  </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 };
 

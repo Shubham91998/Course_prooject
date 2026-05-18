@@ -12,7 +12,7 @@ const EventHome = () => {
       <Events />
       <StudentProgressSection />
       <PreviousEvents />
-      <Footer />
+     
     </>
   )
 }

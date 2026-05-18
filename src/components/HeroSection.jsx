@@ -6,7 +6,7 @@ function HeroSection() {
     
     <div
       id="home"
-      className="relative h-[70vh] bg-cover bg-center mt-18"
+      className="relative h-[70vh] bg-cover bg-center"
       style={{
         backgroundImage: `url("https://preview.colorlib.com/theme/edusite/img/home-background.jpg.webp")`,
       }}

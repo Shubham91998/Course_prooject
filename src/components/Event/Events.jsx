@@ -1,200 +1,269 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
-import { MoveDown } from "lucide-react";
+import {
+  MoveDown,
+  CalendarDays,
+  Clock3,
+  ArrowRight,
+} from "lucide-react";
 
 const LiveEvent = () => {
-
   const members = [
     {
-      name: "Kumari",
+      name: "Kumari Akanksha",
+      role: "Manager, Customer Success @ Keka",
+      image:
+        "https://code-skills-5644f.web.app/static/media/instructor.16eaa744ca83108b1ab6.jpeg",
       experiences: [
         "Manager, Customer Success @ Keka",
         "Senior Associate Operations",
-        "National Topper - Olympiad"
-      ]
+        "National Topper - Olympiad",
+      ],
     },
     {
-      name: "Rohit",
+      name: "Rohit Arora",
+      role: "Senior Software Engineer @ Microsoft",
+      image:
+        "https://code-skills-5644f.web.app/static/media/event_organizer.2ca1dbf026041d4a0e00.png",
       experiences: [
         "Software Engineer with 5 years of experience",
         "Currently working at Microsoft",
-        "Previously worked at Arcesium"
-      ]
-    }
+        "Previously worked at Arcesium",
+      ],
+    },
   ];
 
   const reasons = [
     {
-      title: "Explore the Future of Software Development",
-      description: "Get a sneak peek into the exciting developments in the Software Development Job Market."
+      title: "Explore Future Tech",
+      description:
+        "Understand the latest hiring trends and future opportunities in software engineering.",
     },
     {
-      title: "Key Skills for Success",
-      description: "Learn the technical skills that aspiring software developers need to stay ahead in their careers."
+      title: "Interview Strategies",
+      description:
+        "Learn practical DSA solving techniques used in real SDE-2 interviews.",
     },
     {
-      title: "Stay Updated with New Tech Stacks",
-      description: "Discover how leading companies are changing their tech stacks to stay ahead."
-    }
+      title: "Industry Insights",
+      description:
+        "Get insights into how top companies evaluate engineers.",
+    },
   ];
 
   return (
-    <>
-    <div className='mt-24 mx-5'>
-    <div className="flex flex-col items-center">
-      {/* Animated Heading */}
-      <motion.h1 
-        className="text-3xl font-bold my-5 text-blue-700"
-        animate={{ y: [0, 10, 0] }} 
-        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-      >
-        Upcoming Events
-      </motion.h1>
+    <div className="bg-[#050816] text-white overflow-hidden">
 
-      {/* Animated Finger Down Icon */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-      >
-        <MoveDown size={40} className="text-blue-700" />
-      </motion.div>
-    </div>
-    <h1 className='mb-5 text-2xl font-semibold'>Experience Learning from Industry Leaders for Free</h1>
-    </div>
-    <div className="flex flex-col justify-between w-full md:w-[50%] h-full p-[20px] sm:p-[60px] text-white  bg-black md:mx-80">
-      {/* Header Section */}
-      <div className="flex flex-row justify-between">
-        <div className="flex gap-2 items-center">
-          <h6 className="text-white text-sm px-2 py-1 rounded bg-[#d22d3a]">Live</h6>
-          <span className="text-white w-[1px]" style={{ alignSelf: 'stretch', background: 'rgb(225, 229, 234)' }}></span>
-          <h5 className="text-white">Events</h5>
-        </div>
-        <h6 className="text-sm px-2 py-1 text-[#007a51] rounded bg-[#d9fced]">Free Trial Class</h6>
-      </div>
+      {/* HERO SECTION */}
+      <section className="relative py-24 px-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl"></div>
 
-      {/* Event Title */}
-      <h3 className="mt-5">Live Interview Prep : DSA Solve Along to crack SDE-2 Role</h3>
+        <div className="relative max-w-6xl mx-auto text-center">
 
-      {/* Instructors Section */}
-      <div className="flex flex-col gap-5 mt-5">
-        <h6 className="text-[#b2b9c7]">INSTRUCTOR</h6>
-        <div className="flex flex-row gap-5 w-full text-white">
-          <img
-            src="https://code-skills-5644f.web.app/static/media/instructor.16eaa744ca83108b1ab6.jpeg"
-            alt="instructor"
-            className="w-[60px] h-[60px] rounded-[8px]"
-          />
-          <div className="flex flex-col justify-between">
-            <h6>Kumari Akanksha</h6>
-            <h6 className="text-[#b2b9c7] font-normal">Manager, Customer Success @ keka</h6>
-          </div>
-        </div>
-        <div className="flex flex-row gap-5 w-full text-white">
-          <img
-            src="https://code-skills-5644f.web.app/static/media/event_organizer.2ca1dbf026041d4a0e00.png"
-            alt="instructor"
-            className="w-[60px] h-[60px] rounded-[8px]"
-          />
-          <div className="flex flex-col justify-between">
-            <h6>Rohit Arora</h6>
-            <h6 className="text-[#b2b9c7] font-normal">Senior Software Engineer @ Microsoft</h6>
-          </div>
-        </div>
-      </div>
-
-      {/* Event Details Section */}
-      <div className="flex flex-row justify-between mt-5">
-        <div className="flex flex-row gap-5 text-white">
-          <div
-            className="rounded-[8px] w-[42px] h-[42px] flex items-center justify-center"
-            style={{ backgroundColor: 'rgb(22, 25, 29)' }}
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text"
           >
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path fill="none" d="M0 0h24v24H0V0z"></path>
-              <path d="M7 11h2v2H7v-2zm14-5v14c0 1.1-.9 2-2 2H5a2 2 0 0 1-2-2l.01-14c0-1.1.88-2 1.99-2h1V2h2v2h8V2h2v2h1c1.1 0 2 .9 2 2zM5 8h14V6H5v2zm14 12V10H5v10h14zm-4-7h2v-2h-2v2zm-4 0h2v-2h-2v2z"></path>
-            </svg>
-          </div>
-          <div className="flex flex-col justify-between">
-            <h6 className="text-gray-400">DATE</h6>
-            <h6 className="text-xs">Oct 25, 2024</h6>
-          </div>
-        </div>
+            Upcoming Live Event
+          </motion.h1>
 
-        <div className="flex flex-row gap-5 text-white">
-          <div
-            className="rounded-[8px] w-[42px] h-[42px] flex items-center justify-center"
-            style={{ backgroundColor: 'rgb(22, 25, 29)' }}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="mt-6 text-gray-300 text-lg md:text-xl max-w-3xl mx-auto"
           >
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path fill="none" d="M0 0h24v24H0V0z"></path>
-              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
-            </svg>
-          </div>
-          <div className="flex flex-col justify-between">
-            <h6 className="text-gray-400">TIME</h6>
-            <h6 className="text-xs">8:00 PM</h6>
-          </div>
-        </div>
-      </div>
+            Crack your next SDE-2 interview with live DSA problem solving,
+            real interview experiences, and insider strategies from engineers
+            at Microsoft.
+          </motion.p>
 
-      {/* Join Button */}
-      <div className="w-[200px] mt-5">
-        <a
-          className="px-12 py-3 text-lg font-medium text-white duration-300 ease-in-out rounded md:text-xl bg-rose-500 hover:bg-rose-400"
-          href="/"
-        >
-          Join Now
-        </a>
-      </div>
-    </div>
-    <p className='m-5 '> -{'>'} Join Rohit Arora, Senior Software Engineer at Microsoft, in this interactive Events where you’ll tackle real-world DSA problems faced by candidates applying for the SDE-2 role at top companies like PayPal. Learn key strategies, optimize your coding solutions, and gain insights into how to excel in technical interviews. Perfect for mid-level engineers aiming to level up their problem-solving skills and crack high-stakes interviews.</p>
-    <div className="bg-[#EFF6FF] py-10">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-center text-2xl font-bold pb-6">Meet Kumari & Rohit</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            className="flex justify-center mt-10"
+          >
+            <MoveDown size={40} className="text-blue-400" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* EVENT CARD */}
+      <section className="px-6 pb-20">
+        <div className="max-w-5xl mx-auto">
+
+          <motion.div
+            whileHover={{ scale: 1.01 }}
+            className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl"
+          >
+
+            {/* TOP BADGES */}
+            <div className="flex flex-wrap gap-4 justify-between items-center">
+              <div className="flex items-center gap-3">
+                <span className="bg-red-500 px-4 py-1 rounded-full text-sm font-semibold">
+                  🔴 LIVE
+                </span>
+
+                <span className="bg-blue-500/20 text-blue-300 px-4 py-1 rounded-full text-sm">
+                  Event
+                </span>
+              </div>
+
+              <span className="bg-emerald-500/20 text-emerald-300 px-4 py-1 rounded-full text-sm">
+                Free Trial Class
+              </span>
+            </div>
+
+            {/* TITLE */}
+            <h2 className="text-3xl md:text-5xl font-bold mt-8 leading-tight">
+              Live Interview Prep:
+              <span className="text-blue-400">
+                {" "}
+                DSA Solve Along
+              </span>
+            </h2>
+
+            <p className="text-gray-300 mt-5 text-lg leading-relaxed">
+              Solve real-world DSA problems asked in SDE-2 interviews at top
+              companies like Microsoft, PayPal, and Arcesium.
+            </p>
+
+            {/* SPEAKERS */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+
+              {members.map((member, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -5 }}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-5 flex gap-5 items-center"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-20 h-20 rounded-2xl object-cover border-2 border-blue-400"
+                  />
+
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {member.name}
+                    </h3>
+
+                    <p className="text-blue-300 text-sm mt-1">
+                      {member.role}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* DATE & TIME */}
+            <div className="flex flex-wrap gap-8 mt-10">
+
+              <div className="flex items-center gap-4">
+                <div className="bg-blue-500/20 p-3 rounded-xl">
+                  <CalendarDays />
+                </div>
+
+                <div>
+                  <p className="text-gray-400 text-sm">DATE</p>
+                  <h4 className="font-semibold">Oct 25, 2024</h4>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="bg-purple-500/20 p-3 rounded-xl">
+                  <Clock3 />
+                </div>
+
+                <div>
+                  <p className="text-gray-400 text-sm">TIME</p>
+                  <h4 className="font-semibold">8:00 PM</h4>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-10 bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-4 rounded-2xl text-lg font-semibold flex items-center gap-3 shadow-lg"
+            >
+              Join Now
+              <ArrowRight size={20} />
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold">
+            Meet The Speakers
+          </h2>
+
+          <p className="text-gray-400 mt-4">
+            Learn directly from industry professionals.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
           {members.map((member, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-blue-600 border-l-4 border-blue-600 pl-3">{member.name}'s Experience:</h3>
-              <ul className="mt-4 text-gray-800">
+            <motion.div
+              key={index}
+              whileHover={{ y: -8 }}
+              className="bg-white/5 border border-white/10 rounded-3xl p-8"
+            >
+              <h3 className="text-2xl font-bold text-blue-400">
+                {member.name}
+              </h3>
+
+              <ul className="mt-6 space-y-3 text-gray-300">
                 {member.experiences.map((exp, idx) => (
-                  <li key={idx} className="py-1">✅ {exp}</li>
+                  <li key={idx}>✅ {exp}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
-    </div>
-    <div className="bg-[#EFF6FF] py-10">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-center text-2xl font-bold pb-6 text-blue-700">Why Should You Join?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reasons.map((reason, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-lg text-center">
-              <h3 className="text-lg font-semibold text-blue-600">{reason.title}</h3>
-              <p className="mt-3 text-gray-800">{reason.description}</p>
-            </div>
-          ))}
+      </section>
+
+      {/* WHY JOIN */}
+      <section className="bg-white/5 py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+
+          <div className="text-center">
+            <h2 className="text-4xl font-bold">
+              Why Should You Join?
+            </h2>
+
+            <p className="text-gray-400 mt-4">
+              Everything you need to level up your interview preparation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+
+            {reasons.map((reason, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -10 }}
+                className="bg-[#111827] border border-white/10 rounded-3xl p-8"
+              >
+                <h3 className="text-2xl font-semibold text-blue-400">
+                  {reason.title}
+                </h3>
+
+                <p className="text-gray-300 mt-4 leading-relaxed">
+                  {reason.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-    </>
   );
 };
 

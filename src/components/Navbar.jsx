@@ -77,7 +77,7 @@ function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white p-4 w-full z-50 shadow-lg fixed top-0">
+      <nav className="bg-white p-5 w-full z-50 shadow-lg fixed top-0">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
