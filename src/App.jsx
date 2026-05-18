@@ -79,7 +79,7 @@ function App() {
           <Route path="/mentorship" element={<MentorshipProgram />} />
           <Route path="/placementtraining" element={<PlacementMain />} />
           <Route path="/jobtraining" element={<JobTrainingHome />} />
-          <Route path="/event" element={<EventHome />} />
+          <Route path="/events" element={<EventHome />} />
           <Route path="/job" element={<JobHome />} />
           <Route path="/blog" element={<BlogHome />} />
           <Route path="/contect" element={<ContectHome />} />
