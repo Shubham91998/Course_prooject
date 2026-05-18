@@ -8,7 +8,7 @@ const CertificationHome = () => {
     <>
       <Navbar />
       <CertificateVerification />
-      <Footer />
+      
     </>
   )
 }
