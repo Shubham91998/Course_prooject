@@ -2,67 +2,63 @@ import React from 'react';
 
 const PlacementTraining = () => {
   return (
-    <div className="mt-[72px] max-w-6xl mx-auto px-6 lg:px-4 py-10">
-      <section className="bg-blue-900 text-white text-center py-16">
-        <h1>Code Skills</h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto">
-          Your Ultimate Solution for Placement Training and Collaboration
-        </p>
-      </section>
+    <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 min-h-screen px-2 py-10">
+      <div className="max-w-6xl mx-auto">
+        {/* Hero Section */}
+        <section className="text-center py-14 mb-10 bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-700 rounded-3xl shadow-lg">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-indigo-200 drop-shadow-lg">Code Skills Placement Training</h1>
+          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8">Your Ultimate Solution for Placement Training and Collaboration. Crack top tech interviews, build real skills, and connect with industry mentors.</p>
+          <a href="#enroll" className="inline-block bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-10 py-4 rounded-full text-xl font-bold shadow-lg hover:from-indigo-600 hover:to-blue-600 transition">Enroll Now</a>
+        </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Unlock Your Placement Potential
-          </h2>
-          <p className="text-center mb-12 text-gray-600">
-            Get ahead in your placement preparation with our comprehensive training.
-          </p>
+        {/* Services Section */}
+        <section className="py-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">Unlock Your Placement Potential</h2>
+          <p className="text-center mb-12 text-gray-600 max-w-2xl mx-auto">Get ahead in your placement preparation with our comprehensive, industry-focused training modules and expert mentorship.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="p-6 bg-gray-50 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                <div className="text-center">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-center">{service.title}</h3>
-                <p className="text-gray-600 text-center">{service.description}</p>
+              <div key={index} className="glass-card p-7 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center">
+                <div className="text-4xl mb-3">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-blue-700">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <a className="px-12 py-3 mt-5 text-lg font-medium text-white duration-300 ease-in-out rounded md:text-xl bg-rose-500 hover:bg-rose-400" href="/">
-              Enroll Now for Placement Training
-            </a>
+            <a id="enroll" className="px-12 py-3 mt-5 text-lg font-bold text-white rounded-full bg-gradient-to-r from-rose-500 to-pink-400 hover:from-rose-600 hover:to-pink-500 shadow-lg transition" href="/">Enroll Now for Placement Training</a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Collaborate with Us to Boost Your Placement Records
-          </h2>
-          <p className="text-center mb-12 text-gray-600">
-            Tailored programs for institutes looking to elevate their students' placement opportunities.
-          </p>
+        {/* Collaboration Section */}
+        <section className="py-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-purple-800">Collaborate with Us to Boost Your Placement Records</h2>
+          <p className="text-center mb-12 text-gray-600 max-w-2xl mx-auto">Tailored programs for institutes looking to elevate their students' placement opportunities and industry connections.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {collaborationServices.map((service, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                <div className="text-center">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-center">{service.title}</h3>
-                <p className="text-gray-600 text-center">{service.description}</p>
+              <div key={index} className="glass-card p-7 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center">
+                <div className="text-4xl mb-3">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-purple-700">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <a className="px-12 py-3 mt-5 text-lg font-medium text-white duration-300 ease-in-out rounded md:text-xl bg-rose-500 hover:bg-rose-400" href="/">
-              Partner With Us
-            </a>
+            <a className="px-12 py-3 mt-5 text-lg font-bold text-white rounded-full bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 shadow-lg transition" href="/">Partner With Us</a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+      <style>{`
+        .glass-card {
+          background: rgba(255,255,255,0.92);
+          box-shadow: 0 8px 32px 0 rgba(99,102,241,0.10);
+          backdrop-filter: blur(6px);
+          transition: box-shadow .2s, transform .2s;
+        }
+        .glass-card:hover {
+          box-shadow: 0 0 0 4px #a5b4fc, 0 8px 32px 0 rgba(99,102,241,0.18);
+          transform: translateY(-4px) scale(1.03);
+        }
+      `}</style>
     </div>
   );
 };

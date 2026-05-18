@@ -12,7 +12,6 @@ import ContactForm from '../ContectForm'
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <TrainingSection />
       <CoursePrice />
@@ -20,7 +19,7 @@ const Home = () => {
       <CommunitySection />
       <CodeSkillsSection />
       <ContactForm />
-      <Footer />
+    
     </div>
   )
 }

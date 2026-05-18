@@ -23,7 +23,7 @@ const MeetOurMentorsSection = () => {
               <h3 className="text-xl font-bold mb-2">Dr. Emma Watson</h3>
               <p className="text-purple-600 font-semibold mb-2">AI Research Scientist</p>
               <p className="text-gray-600 text-center mb-4">Machine Learning, Neural Networks</p>
-              <button className="bg-purple-600 text-white rounded-full px-4 py-2 mt-2">Learn More</button>
+              <button className="bg-purple-600 text-white rounded-full px-4 py-2 mt-2">Try Now</button>
             </div>
             {/* Add more mentor cards */}
           </div>

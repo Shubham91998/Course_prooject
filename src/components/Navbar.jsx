@@ -40,7 +40,7 @@ function Navbar() {
       submenu: [
         { title: "Industrial Internship", link: "/internship", description: "Industry Experience" },
          { title: "Fellowships", link: "/doctoral-fellowships", description: "PhD Fellowships" },
-        { title: "Training & Placement", link: "/live-classes", description: "Live Training Sessions" },
+        { title: "Training & Placement", link: "/placement-training", description: "Live Training Sessions" },
         { title: "Career Resources", link: "/career-resources", description: "Career Guidance" },
         { title: "Certificate Verification", link: "/certificateverification", description: "Verify Certificates" },
       ],
@@ -49,7 +49,7 @@ function Navbar() {
       name: "Mentorship",
       submenu: [
         { title: "Academic Mentorship", link: "/academic-mentorship", description: "Academic Guidance" },
-        { title: "Industry Mentorship", link: "/industry-mentorship", description: "Industry Guidance" },
+        { title: "Industry Mentorship", link: "/mentorship", description: "Industry Guidance" },
         { title: "Resume Submission", link: "/resume-submission", description: "Submit Resume" },
         { title: "Interview Preparation", link: "/interview-preparation", description: "Prepare for Interviews" },
 

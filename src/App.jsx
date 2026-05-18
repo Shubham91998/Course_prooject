@@ -44,6 +44,11 @@ import ContectHome from "./components/Contect/ContectHome";
 import CertificationHome from "./components/Certification/CertificationHome";
 import ExploreResearchPapers from "./components/ExploreResearchPapers.jsx";
 import FullPaperView from "./components/FullPreview.jsx";
+import PlacementTraining from "./components/PlacementTraining/PlacementTraining.jsx";
+import CareerResources from "./components/CareerResources.jsx";
+import FellowshipPage from "./components/FellowshipPage.jsx";
+import AcademicMentorship from "./components/AcademicMentorship.jsx";
+
 
 function App() {
   return (
@@ -90,6 +95,11 @@ function App() {
           <Route path="/programming/python" element={<ProgrammingCoursePage />} />
           <Route path="/research-papers" element={<ExploreResearchPapers />} />
           <Route path="/research-papers/:id" element={<FullPaperView />} />
+          <Route path="/placement-training" element={<PlacementTraining />} />
+          <Route path="/career-resources" element={<CareerResources />} />
+          <Route path="/doctoral-fellowships" element={<FellowshipPage />} />
+          <Route path="/academic-mentorship" element={<AcademicMentorship />} />
+          {/* Add more routes as needed */}
 
         </Routes>
       </div>

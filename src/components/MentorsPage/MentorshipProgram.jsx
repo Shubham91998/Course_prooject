@@ -15,7 +15,7 @@ const MentorshipProgram = () => {
   return (
     <>
     <div>
-        <Navbar />
+
     <HeroSection />
       <WelcomeSection />
       <BenefitsSections />
@@ -25,7 +25,7 @@ const MentorshipProgram = () => {
       <PaidMentorshipProgramsSection />
       <MenteeExperiancesSections />
       <ApplySection />
-      <Footer />
+    
     </div>
       
     </>
