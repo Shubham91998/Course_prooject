@@ -159,7 +159,7 @@ function Navbar() {
           <div className="hidden lg:block ml-4">
             {user ? (
               <button
-                onClick={() => { logout(); navigate('/login'); }}
+                onClick={() => { logout(); setOpenDropdown(null); navigate('/login'); }}
                 className="bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
               >
                 Logout
@@ -167,6 +167,7 @@ function Navbar() {
             ) : (
               <Link
                 to="/login"
+                onClick={() => setOpenDropdown(null)}
                 className="hidden lg:flex items-center space-x-4 mr-4 bg-gradient-to-r from-purple-600 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-purple-700 hover:to-indigo-600 transition"
               >
                 Login
